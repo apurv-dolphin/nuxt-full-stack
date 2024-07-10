@@ -48,7 +48,7 @@
             <nuxt-link
               :to="'/'"
               :class="isActive('/')"
-              class="block py-2 px-3 rounded md:bg-transparent md:p-0 dark:text-white"
+              class="w-full block py-2 px-3 rounded md:bg-transparent md:p-0 dark:text-white"
               >Home
             </nuxt-link>
           </li>
@@ -56,7 +56,7 @@
             <nuxt-link
               :to="'/apurv'"
               :class="isActive('/apurv')"
-              class="block py-2 px-3 rounded md:bg-transparent md:p-0 dark:text-white"
+              class="w-full block py-2 px-3 rounded md:bg-transparent md:p-0 dark:text-white"
               >Apurv
             </nuxt-link>
           </li>
