@@ -15,8 +15,8 @@ export const useAuthStore = defineStore("auth", {
       await this.validateToken();
     },
     logout() {
-      this.authenticated = false;
       this.token = null;
+      this.authenticated = false;
       Cookies.remove("token");
     },
     async validateToken() {
