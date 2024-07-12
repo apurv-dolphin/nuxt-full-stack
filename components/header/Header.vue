@@ -54,6 +54,14 @@
           </li>
           <li class="flex flex-wrap content-center">
             <nuxt-link
+              :to="'/product'"
+              :class="isActive('/product')"
+              class="w-full block py-2 px-3 rounded md:bg-transparent md:p-0 dark:text-white"
+              >Product
+            </nuxt-link>
+          </li>
+          <li class="flex flex-wrap content-center">
+            <nuxt-link
               :to="'/apurv'"
               :class="isActive('/apurv')"
               class="w-full block py-2 px-3 rounded md:bg-transparent md:p-0 dark:text-white"
