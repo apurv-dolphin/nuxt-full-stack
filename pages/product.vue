@@ -76,17 +76,6 @@
     :id="modaleInfo.deleteId"
     @close-modal="cancelDelete"
   />
-  <editModal
-    v-if="modaleInfo.editProduct"
-    :product="modaleInfo.editProductData"
-    :mode="modalMode"
-    @close-modal="cancelEdit"
-  />
-  <deleteModal
-    v-if="modaleInfo.deleteProduct"
-    :id="modaleInfo.deleteId"
-    @close-modal="cancelDelete"
-  />
 </template>
 
 <script>
@@ -126,6 +115,7 @@ export default {
     const handleEdit = async (product) => {
       modaleInfo.value.editProductData = product;
       modaleInfo.value.editProduct = true;
+      modalMode.value = "";
     };
 
     const cancelDelete = () => {

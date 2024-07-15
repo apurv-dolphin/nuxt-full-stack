@@ -1,5 +1,5 @@
 // server/api/products.js
-import Product from "../models/productModel";
+import Product from "../../models/productModel";
 
 export default defineEventHandler(async (event) => {
   const method = event.method.toLowerCase();
@@ -33,26 +33,6 @@ export default defineEventHandler(async (event) => {
         message: "Product successfully updated",
         product,
       };
-    } else if (method === "delete") {
-      // Handle DELETE request to remove a product
-      console.log("Delete request received:", event);
-
-      const params = event.context.params as { id: string };
-      console.log("Params received:", params);
-
-      if (!params || !params.id) {
-        event.res.statusCode = 400; // Bad Request
-        return { error: "ID parameter is required" };
-      }
-
-      const id = params.id;
-      const product = await Product.findByIdAndDelete(id);
-      if (!product) {
-        event.res.statusCode = 404; // Not Found
-        return { error: "Product not found" };
-      }
-      event.res.statusCode = 200; // OK
-      return { message: "Product successfully deleted" };
     } else {
       // Handle other HTTP methods
       event.res.statusCode = 405; // Method Not Allowed
