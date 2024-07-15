@@ -10,14 +10,24 @@
 </template>
 
 <script setup>
-import { computed } from "vue";
+import { computed, onMounted, watch } from "vue";
 import Header from "@/components/header/Header.vue";
 import Footer from "@/components/footer/Footer.vue";
 import { useAuthStore } from "~/store/authentication";
+import { useRoute, useRouter } from "vue-router";
 
 const authStore = useAuthStore();
+const route = useRoute();
+const router = useRouter();
 const isAuthenticated = computed(() => authStore.isAuthenticated);
 onMounted(async () => {
   await authStore.validateToken();
 });
+
+watch(
+  () => route.fullPath,
+  async () => {
+    await authStore.validateToken();
+  }
+);
 </script>

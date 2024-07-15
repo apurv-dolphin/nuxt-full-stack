@@ -1,9 +1,9 @@
 <template>
   <div class="min-h-[500px] mb-6">
-    <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+    <div class="relative overflow-x-auto shadow-xl sm:rounded-lg">
       <button
         @click="openCreateModal"
-        class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mb-4"
+        class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded m-4 right-2 absolute"
       >
         Create Product
       </button>
@@ -13,7 +13,7 @@
         <caption
           class="p-5 text-lg font-semibold text-left rtl:text-right text-gray-900 bg-white dark:text-white dark:bg-gray-800"
         >
-          Our products
+          Our Products
           <p class="mt-1 text-sm font-normal text-gray-500 dark:text-gray-400">
             List of our products of Apurv Khalas.
           </p>
@@ -22,14 +22,12 @@
           class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
         >
           <tr>
-            <th scope="col" class="px-6 py-3">Product name</th>
+            <th scope="col" class="px-6 py-3">Product Name</th>
             <th scope="col" class="px-6 py-3">Category</th>
             <th scope="col" class="px-6 py-3">Price</th>
             <th scope="col" class="px-6 py-3">Qty</th>
-            <th scope="col" class="px-6 py-3">description</th>
-            <th scope="col" class="px-6 py-3">
-              <span class="sr-only">Edit</span>
-            </th>
+            <th scope="col" class="px-6 py-3">Description</th>
+            <th scope="col" class="px-6 py-3 text-right">Actions</th>
           </tr>
         </thead>
         <tbody>
@@ -48,7 +46,7 @@
             <td class="px-6 py-4">{{ product.price }}</td>
             <td class="px-6 py-4">{{ product.stockQuantity }}</td>
             <td class="px-6 py-4">{{ product.description }}</td>
-            <td class="px-6 py-4 flex text-right">
+            <td class="px-6 py-4 flex justify-end space-x-4">
               <div
                 class="font-medium text-blue-600 dark:text-blue-500 hover:underline cursor-pointer"
                 @click="handleEdit(product)"
@@ -56,7 +54,7 @@
                 Edit
               </div>
               <div
-                class="font-medium text-blue-600 dark:text-blue-500 hover:underline ml-4 cursor-pointer"
+                class="font-medium text-red-600 dark:text-red-500 hover:underline cursor-pointer"
                 @click="handleDelete(product._id)"
               >
                 Delete
@@ -67,6 +65,17 @@
       </table>
     </div>
   </div>
+  <editModal
+    v-if="modaleInfo.editProduct"
+    :product="modaleInfo.editProductData"
+    :mode="modalMode"
+    @close-modal="cancelEdit"
+  />
+  <deleteModal
+    v-if="modaleInfo.deleteProduct"
+    :id="modaleInfo.deleteId"
+    @close-modal="cancelDelete"
+  />
   <editModal
     v-if="modaleInfo.editProduct"
     :product="modaleInfo.editProductData"
