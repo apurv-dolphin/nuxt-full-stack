@@ -70,7 +70,7 @@
           </li>
           <li class="flex flex-wrap content-center">
             <button
-              class="bg-blue-500 hover:bg-blue-700 block py-2 px-4 text-white rounded-full"
+              class="bg-[#00da9f] hover:bg-[#00da9f] block py-2 px-4 text-white rounded-full"
               @click="handleLogout"
             >
               Logout
@@ -122,7 +122,7 @@ const toggleNav = () => {
 
 const isActive = (routePath) => {
   return route.path === routePath
-    ? "text-purple-700 bg-gray-200 md:text-purple-500"
-    : "text-gray-900 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent";
+    ? "text-[#00da9f] bg-gray-200 md:text-[#00da9f]"
+    : "text-gray-900 md:hover:text-[#00da9f] dark:text-white md:dark:hover:text-[#00da9f] dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent";
 };
 </script>
