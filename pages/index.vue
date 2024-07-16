@@ -14,7 +14,7 @@
             <h3
               class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl md:text-3xl lg:text-4xl xl:text-5xl"
             >
-              <p class="block text-indigo-600 xl:inline">
+              <p class="block text-[#00da9f] xl:inline">
                 Why Choose Apurv Works?
               </p>
             </h3>
@@ -27,7 +27,7 @@
             <div class="relative flex flex-col sm:flex-row sm:space-x-4">
               <a
                 href="#_"
-                class="flex items-center w-full px-6 py-3 mb-3 text-lg text-white bg-indigo-600 rounded-md sm:mb-0 hover:bg-indigo-700 sm:w-auto"
+                class="flex items-center w-full px-6 py-3 mb-3 text-lg text-white bg-[#00da9f] rounded-md sm:mb-0 hover:bg-[#00b087] sm:w-auto"
               >
                 Try It Free
                 <svg
@@ -278,7 +278,7 @@
     <div class="px-16 bg-white">
       <div class="container flex flex-col items-start mx-auto lg:items-center">
         <p
-          class="relative flex items-start justify-start w-full text-lg font-bold tracking-wider text-purple-500 uppercase lg:justify-center lg:items-center"
+          class="relative flex items-start justify-start w-full text-lg font-bold tracking-wider text-[#00da9f] uppercase lg:justify-center lg:items-center"
         >
           Don't just take our word for it
         </p>
