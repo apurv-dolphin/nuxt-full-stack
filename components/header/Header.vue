@@ -80,7 +80,7 @@
 </template>
 
 <script setup>
-import { ref, computed, watch } from "vue";
+import { ref, watch } from "vue";
 import { useRoute } from "vue-router";
 import axiosClient from "~/service/runtimeConfig";
 import { useAuthStore } from "~/store/authentication";
