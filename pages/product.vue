@@ -127,14 +127,6 @@ export default {
       modaleInfo.value.editProduct = false;
     };
 
-    const getProducts = async () => {
-      try {
-        const response = await axiosClient.get("/products");
-        productData.value = response.data;
-      } catch (error) {
-        console.log(error);
-      }
-    };
     onMounted(async () => {
       await productStore.getProducts();
     });
