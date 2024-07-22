@@ -12,7 +12,7 @@ const teamMemberData = [
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRefpyTA2-FoilVvxG-FnoSGBHxIsKRwys4pw&usqp=CAU",
   },
   {
-    name: "Mr. King",
+    name: "Miss Shizuka",
     role: "Dev Ops",
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSX0aeeIjoERRA1PS3UtKB17Te2wfb0MFibtg4v-PhKk2xv-IDS2eb4cjdLE-OH7F3arw&usqp=CAU",
